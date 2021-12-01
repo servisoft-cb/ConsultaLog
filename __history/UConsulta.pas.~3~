@@ -1,0 +1,41 @@
+unit UConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TfrmConsulta = class(TForm)
+    Button1: TButton;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    Edit2: TEdit;
+    qryConsulta: TFDQuery;
+    qryConsultaID_LOG: TIntegerField;
+    qryConsultaNOME_TABELA: TStringField;
+    qryConsultaOPERACAO: TIntegerField;
+    qryConsultaUSUARIO: TStringField;
+    qryConsultaDATA_OPERACAO: TDateField;
+    qryConsultaHORA_OPERACAO: TTimeField;
+    qryConsultaLOG: TMemoField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmConsulta: TfrmConsulta;
+
+implementation
+
+{$R *.dfm}
+
+end.

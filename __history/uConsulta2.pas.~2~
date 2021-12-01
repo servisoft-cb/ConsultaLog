@@ -1,0 +1,33 @@
+unit uConsulta2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls;
+
+type
+  TuConsultaLog = class(TForm)
+    Consulta: TLabel;
+    edtConsulta: TEdit;
+    Buscar: TButton;
+    dbgridConsulta: TDBGrid;
+    btnIncluir: TButton;
+    btnEditar: TButton;
+    btnExluir: TButton;
+    btnVoltar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  uConsultaLog: TuConsultaLog;
+
+implementation
+
+{$R *.dfm}
+
+end.

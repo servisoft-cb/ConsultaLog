@@ -1,0 +1,144 @@
+object frmConsulta: TfrmConsulta
+  Left = 0
+  Top = 0
+  Caption = 'fdcon'
+  ClientHeight = 463
+  ClientWidth = 766
+  Color = clBtnFace
+  CustomTitleBar.CaptionAlignment = taCenter
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 40
+    Top = 136
+    Width = 75
+    Height = 25
+    Caption = 'Filtrar'
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 200
+    Width = 766
+    Height = 263
+    Align = alBottom
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID_LOG'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'NOME_TABELA'
+        Width = 188
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'OPERACAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'USUARIO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DATA_OPERACAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'HORA_OPERACAO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'LOG'
+        Visible = True
+      end>
+  end
+  object Edit2: TEdit
+    Left = 384
+    Top = 138
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'Edit2'
+  end
+  object DataSource1: TDataSource
+    Left = 304
+    Top = 72
+  end
+  object qryConsulta: TFDQuery
+    SQL.Strings = (
+      
+        'select ID_LOG, NOME_TABELA, OPERACAO, USUARIO, DATA_OPERACAO, HO' +
+        'RA_OPERACAO, "LOG"'
+      'from LOG_SISTEMA l'
+      'where l.data_operacao >= :data'
+      '  and l.nome_tabela = '#39'cdsPedido'#39
+      '  and l."LOG" like '#39'%ID: 41358%'#39)
+    Left = 208
+    Top = 72
+    ParamData = <
+      item
+        Name = 'DATA'
+        DataType = ftDate
+        ParamType = ptInput
+      end>
+    object qryConsultaID_LOG: TIntegerField
+      FieldName = 'ID_LOG'
+      Origin = 'ID_LOG'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object qryConsultaNOME_TABELA: TStringField
+      FieldName = 'NOME_TABELA'
+      Origin = 'NOME_TABELA'
+      Required = True
+      Size = 80
+    end
+    object qryConsultaOPERACAO: TIntegerField
+      FieldName = 'OPERACAO'
+      Origin = 'OPERACAO'
+      Required = True
+    end
+    object qryConsultaUSUARIO: TStringField
+      FieldName = 'USUARIO'
+      Origin = 'USUARIO'
+      Required = True
+      Size = 30
+    end
+    object qryConsultaDATA_OPERACAO: TDateField
+      FieldName = 'DATA_OPERACAO'
+      Origin = 'DATA_OPERACAO'
+      Required = True
+    end
+    object qryConsultaHORA_OPERACAO: TTimeField
+      FieldName = 'HORA_OPERACAO'
+      Origin = 'HORA_OPERACAO'
+      Required = True
+    end
+    object qryConsultaLOG: TMemoField
+      FieldName = 'LOG'
+      Origin = '"LOG"'
+      Required = True
+      BlobType = ftMemo
+    end
+  end
+end

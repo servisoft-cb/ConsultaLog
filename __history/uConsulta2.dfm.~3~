@@ -1,0 +1,108 @@
+object uConsultaLog: TuConsultaLog
+  Left = 0
+  Top = 0
+  Caption = 'Consulta Log'
+  ClientHeight = 431
+  ClientWidth = 691
+  Color = clBtnFace
+  CustomTitleBar.CaptionAlignment = taCenter
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Consulta: TLabel
+    Left = 48
+    Top = 24
+    Width = 46
+    Height = 13
+    Caption = 'Pesquisar'
+  end
+  object Label1: TLabel
+    Left = 48
+    Top = 64
+    Width = 53
+    Height = 13
+    Caption = 'Data Inicial'
+  end
+  object Label2: TLabel
+    Left = 328
+    Top = 64
+    Width = 48
+    Height = 13
+    Caption = 'Data Final'
+  end
+  object dbgridConsulta: TDBGrid
+    Left = 40
+    Top = 112
+    Width = 627
+    Height = 176
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object btnIncluir: TButton
+    Left = 40
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 1
+  end
+  object btnEditar: TButton
+    Left = 144
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 2
+  end
+  object btnExluir: TButton
+    Left = 248
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 3
+  end
+  object btnVoltar: TButton
+    Left = 344
+    Top = 312
+    Width = 75
+    Height = 25
+    Caption = 'Voltar'
+    TabOrder = 4
+  end
+  object DateTimePicker1: TDateTimePicker
+    Left = 107
+    Top = 64
+    Width = 186
+    Height = 21
+    Date = 44508.000000000000000000
+    Time = 0.864485046295158100
+    TabOrder = 5
+  end
+  object DateTimePicker2: TDateTimePicker
+    Left = 382
+    Top = 64
+    Width = 186
+    Height = 21
+    Date = 44508.000000000000000000
+    Time = 0.864485046295158100
+    TabOrder = 6
+  end
+  object BitBtn1: TBitBtn
+    Left = 592
+    Top = 64
+    Width = 75
+    Height = 25
+    Caption = '&CONSULTAR'
+    TabOrder = 7
+  end
+end

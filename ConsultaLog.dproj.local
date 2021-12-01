@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/11/04 15:15:08.000.080,=C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/04 15:16:53.000.915,C:\Servisoft\ConsultaLogs\UConsulta.dfm=C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/11/04 15:16:53.000.915,C:\Servisoft\ConsultaLogs\UConsulta.pas=C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/11/04 15:17:11.000.963,C:\Servisoft\ConsultaLogs\ConsultaLog.dproj=C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2021/11/05 12:16:13.000.666,C:\Servisoft\ConsultaLogs\UConsulta.dfm=C:\Servisoft\ConsultaLogs\UConsultaLogs.dfm</Transaction>
+    <Transaction>2021/11/05 12:16:13.000.666,C:\Servisoft\ConsultaLogs\UConsulta.pas=C:\Servisoft\ConsultaLogs\UConsultaLogs.pas</Transaction>
+  </Transactions>
+</BorlandProject>

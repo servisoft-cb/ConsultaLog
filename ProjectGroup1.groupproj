@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B5A4C8F8-E66F-44D5-91F5-B70541756B0C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ConsultaLog.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Project1.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ConsultaLog">
+        <MSBuild Projects="ConsultaLog.dproj"/>
+    </Target>
+    <Target Name="ConsultaLog:Clean">
+        <MSBuild Projects="ConsultaLog.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConsultaLog:Make">
+        <MSBuild Projects="ConsultaLog.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project1">
+        <MSBuild Projects="C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Project1.dproj"/>
+    </Target>
+    <Target Name="Project1:Clean">
+        <MSBuild Projects="C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Project1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project1:Make">
+        <MSBuild Projects="C:\Users\Dany\Documents\Embarcadero\Studio\Projects\Project1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ConsultaLog;Project1"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ConsultaLog:Clean;Project1:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ConsultaLog:Make;Project1:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
